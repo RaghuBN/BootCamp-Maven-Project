@@ -189,7 +189,26 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
-	
+
+	@Test(priority = 6)
+	public void EdgeTestUpdate() {
+		System.setProperty("webdriver.edge.driver", "./Edge Driver Jars/msedgedriver.exe");
+		driver = new EdgeDriver();
+		driver.manage().window().maximize();
+		driver.get(EdgeBaseUrl);
+		
+		String expectedTitle = "TestNG Documentation";
+		String actualTitle = driver.getTitle();
+		String URL = driver.getCurrentUrl();
+		System.out.println(URL);
+		
+		if (actualTitle.equals(expectedTitle)) {
+			System.out.println("Title matched: Test Script Passed");
+		} else {
+			System.out.println("Title not matched: Test Script Failed");
+		}
+		driver.quit();
+	}
 }
 
 
