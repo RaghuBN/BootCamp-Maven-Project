@@ -16,10 +16,16 @@
 
 package com.MavenTest;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class MultipleBrowserTest {
@@ -209,6 +215,45 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
-}
+	
+	@Test(priority = 6)		
+		public class LinkTextandPartialLink {
+			WebDriver driver;
 
+			@BeforeTest
+			public void setUp() {
+				System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
+				driver = new ChromeDriver();
+				driver.manage().window().maximize();
+			}
+
+			@Test
+			public void linkTest() throws Exception {
+				driver.get("https://www.hollandandbarrett.com/");
+				Thread.sleep(5000);
+				driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div[2]/div/div/button[2]")).click();
+				driver.findElement(By.partialLinkText("Vitamins")).click();
+
+				List<WebElement> links = driver.findElements(By.xpath("//a"));
+				int nolinks = links.size();
+				System.out.println("No.Of links in hollandandbarrett Application: " + nolinks);
+
+				for (int i = 0; i < links.size(); i++) {
+					System.out.println(links.get(i).getText());
+					
+					String str = links.get(i).getText();
+					String str1 = "Vitamins";
+					if (str == str1) {
+						driver.findElement(By.linkText("Vitamins")).click();
+					//    driver.findElement(By.xpath("(//a[contains(@type,'button')])[4]")).click();
+					}
+				}
+			}
+
+			@AfterTest
+			public void teardown() {
+				driver.quit();
+			}
+}
+}
 
