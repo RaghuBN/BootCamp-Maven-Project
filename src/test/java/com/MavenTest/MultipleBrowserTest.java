@@ -219,42 +219,21 @@ public class MultipleBrowserTest {
 	}
 
 	@Test(priority = 7)
-	public class LinkTextandPartialLink {
-		WebDriver driver;
-
-		@BeforeTest
-		public void setUp() {
-			System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-		}
-
-		@Test
-		public void linkTest() throws Exception {
-			driver.get("https://www.hollandandbarrett.com/");
-			Thread.sleep(20000);
-			driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div[2]/div/div/button[2]")).click();
-			driver.findElement(By.partialLinkText("Vitamins")).click();
-
-			List<WebElement> links = driver.findElements(By.xpath("//a"));
-			int nolinks = links.size();
-			System.out.println("No.Of links in hollandandbarrett Application: " + nolinks);
-
-			for (int i = 0; i < links.size(); i++) {
-				System.out.println(links.get(i).getText());
-
-				String str = links.get(i).getText();
-				String str1 = "Vitamins";
-				if (str == str1) {
-					driver.findElement(By.linkText("Vitamins")).click();
-					// driver.findElement(By.xpath("(//a[contains(@type,'button')])[4]")).click();
-				}
-			}
-		}
-
+	public void IDLocatorExample() {
+		System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://auth.hollandandbarrett.com/u/login?");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.id("username")).sendKeys("raghu.astepahead@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("raghuBN@123");
+		//driver.findElement(By.xpath("/html/body/div/div/section/section/div[1]/button")).click();
+		driver.findElement(By.xpath("//button[normalize-space()='Sign In']")).click();
+		//driver.quit();
+		
+	}
 		@AfterTest
 		public void teardown() {
 			driver.quit();
 		}
 	}
-}

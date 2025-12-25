@@ -9,15 +9,39 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">32,667</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">83,573</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">com.MavenTest.MultipleBrowserTest</td><td><a href="#m0">ChromeTest</a></td><td rowspan="1">1766657980947</td><td rowspan="1">4467</td></tr><tr class="passedeven"><td><a href="#m1">ChromeTest1</a></td><td rowspan="1">1766657985414</td><td rowspan="1">4001</td></tr><tr class="passedeven"><td><a href="#m2">ChromeTest2</a></td><td rowspan="1">1766657989418</td><td rowspan="1">3831</td></tr><tr class="passedeven"><td><a href="#m3">ChromeTest4</a></td><td rowspan="1">1766657993251</td><td rowspan="1">4297</td></tr><tr class="passedeven"><td><a href="#m4">EdgeTest</a></td><td rowspan="1">1766657964915</td><td rowspan="1">5915</td></tr><tr class="passedeven"><td><a href="#m5">FirefoxTest</a></td><td rowspan="1">1766657970864</td><td rowspan="1">10083</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.MavenTest.MultipleBrowserTest$LinkTextandPartialLink</td><td><a href="#m0">linkTest</a></td><td rowspan="1">1766675260700</td><td rowspan="1">23756</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">com.MavenTest.MultipleBrowserTest</td><td><a href="#m1">ChromeTest</a></td><td rowspan="1">1766675294993</td><td rowspan="1">21410</td></tr><tr class="passedeven"><td><a href="#m2">ChromeTest1</a></td><td rowspan="1">1766675316405</td><td rowspan="1">5199</td></tr><tr class="passedeven"><td><a href="#m3">ChromeTest2</a></td><td rowspan="1">1766675321604</td><td rowspan="1">4123</td></tr><tr class="passedeven"><td><a href="#m4">ChromeTest4</a></td><td rowspan="1">1766675325727</td><td rowspan="1">5176</td></tr><tr class="passedeven"><td><a href="#m5">EdgeTest</a></td><td rowspan="1">1766675254016</td><td rowspan="1">6621</td></tr><tr class="passedeven"><td><a href="#m6">EdgeTestUpdate</a></td><td rowspan="1">1766675330903</td><td rowspan="1">4651</td></tr><tr class="passedeven"><td><a href="#m7">FirefoxTest</a></td><td rowspan="1">1766675284492</td><td rowspan="1">10501</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">com.MavenTest.MultipleBrowserTest#ChromeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.MavenTest.MultipleBrowserTest#ChromeTest1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.MavenTest.MultipleBrowserTest#ChromeTest2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.MavenTest.MultipleBrowserTest#ChromeTest4</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.MavenTest.MultipleBrowserTest#EdgeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.MavenTest.MultipleBrowserTest#FirefoxTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Surefire test</h2><h3 id="m0">com.MavenTest.MultipleBrowserTest$LinkTextandPartialLink#linkTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[2]/div[2]/div/div/div[2]/div/div/button[2]&quot;}
+  (Session info: chrome=143.0.7499.170)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [adca84a3ca7fca2f93be9cab3b6881ed, findElement {using=xpath, value=/html/body/div[2]/div[2]/div/div/div[2]/div/div/button[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\raghu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63981}, goog:processID: 26612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63981/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: adca84a3ca7fca2f93be9cab3b6881ed
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at com.MavenTest.MultipleBrowserTest$LinkTextandPartialLink.linkTest(MultipleBrowserTest.java:236)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.MavenTest.MultipleBrowserTest#ChromeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.MavenTest.MultipleBrowserTest#ChromeTest1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.MavenTest.MultipleBrowserTest#ChromeTest2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.MavenTest.MultipleBrowserTest#ChromeTest4</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.MavenTest.MultipleBrowserTest#EdgeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.MavenTest.MultipleBrowserTest#EdgeTestUpdate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.MavenTest.MultipleBrowserTest#FirefoxTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
