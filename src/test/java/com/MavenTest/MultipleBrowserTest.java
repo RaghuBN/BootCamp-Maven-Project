@@ -40,22 +40,22 @@ public class MultipleBrowserTest {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(ChromeBaseUrl);
-		
+
 		String expectedTitle = "Downloads | Selenium";
-		String actualTitle = driver.getTitle();		
+		String actualTitle = driver.getTitle();
 		String url = driver.getCurrentUrl();
-        int urlLength = url.length();
-        System.out.println("Current URL: " + url);
-        System.out.println("URL Length: " + urlLength);
-        
+		int urlLength = url.length();
+		System.out.println("Current URL: " + url);
+		System.out.println("URL Length: " + urlLength);
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Title matched: Test Script Passed: Did a Wonderful Job.....!");
 		} else {
 			System.out.println("Title not matched: Test Script Failed: Mentor Is Bad ");
 		}
-		
+
 		String actualURL = url;
-		String expectedURL = driver.getCurrentUrl();	
+		String expectedURL = driver.getCurrentUrl();
 		driver.navigate().refresh();
 		if (actualURL.equals(expectedURL)) {
 			System.out.println("URL matched: Test Script Passed: Did a Wonderful Job.....! ");
@@ -64,7 +64,7 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
-	
+
 	@Test(priority = 1)
 	public void FirefoxTest() {
 		System.setProperty("webdriver.gecko.driver", "./Firefox Driver Jars/geckodriver.exe");
@@ -76,7 +76,7 @@ public class MultipleBrowserTest {
 		String actualTitle = driver.getTitle();
 		String URL = driver.getCurrentUrl();
 		System.out.println(URL);
-		
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Title matched: Test Script Passed");
 		} else {
@@ -84,19 +84,19 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
-	
+
 	@Test(priority = 0)
 	public void EdgeTest() {
 		System.setProperty("webdriver.edge.driver", "./Edge Driver Jars/msedgedriver.exe");
 		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get(EdgeBaseUrl);
-		
+
 		String expectedTitle = "TestNG Documentation";
 		String actualTitle = driver.getTitle();
 		String URL = driver.getCurrentUrl();
 		System.out.println(URL);
-		
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Title matched: Test Script Passed");
 		} else {
@@ -104,29 +104,29 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
-	
+
 	@Test(priority = 3)
 	public void ChromeTest1() {
 		System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(ChromeBaseUrl);
-		
+
 		String expectedTitle = "Selenium";
-		String actualTitle = driver.getTitle();		
+		String actualTitle = driver.getTitle();
 		String url = driver.getCurrentUrl();
-        int urlLength = url.length();
-        System.out.println("Current URL: " + url);
-        System.out.println("URL Length: " + urlLength);
-        
+		int urlLength = url.length();
+		System.out.println("Current URL: " + url);
+		System.out.println("URL Length: " + urlLength);
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Title matched: Test Script Passed: Did a Wonderful Job.....!");
 		} else {
 			System.out.println("Title not matched: Test Script Failed: Mentor Is Bad ");
 		}
-		
+
 		String actualURL = url;
-		String expectedURL = driver.getCurrentUrl();	
+		String expectedURL = driver.getCurrentUrl();
 		driver.navigate().refresh();
 		if (actualURL.equals(expectedURL)) {
 			System.out.println("URL matched: Test Script Passed: Did a Wonderful Job.....! ");
@@ -135,28 +135,29 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
+
 	@Test(priority = 4)
 	public void ChromeTest2() {
 		System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(ChromeBaseUrl);
-		
+
 		String expectedTitle = "Raghavendra";
-		String actualTitle = driver.getTitle();		
+		String actualTitle = driver.getTitle();
 		String url = driver.getCurrentUrl();
-        int urlLength = url.length();
-        System.out.println("Current URL: " + url);
-        System.out.println("URL Length: " + urlLength);
-        
+		int urlLength = url.length();
+		System.out.println("Current URL: " + url);
+		System.out.println("URL Length: " + urlLength);
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Title matched: Test Script Passed: Did a Wonderful Job.....!");
 		} else {
 			System.out.println("Title not matched: Test Script Failed: Mentor Is Bad ");
 		}
-		
+
 		String actualURL = url;
-		String expectedURL = driver.getCurrentUrl();	
+		String expectedURL = driver.getCurrentUrl();
 		driver.navigate().refresh();
 		if (actualURL.equals(expectedURL)) {
 			System.out.println("URL matched: Test Script Passed: Did a Wonderful Job.....! ");
@@ -165,28 +166,29 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
+
 	@Test(priority = 5)
 	public void ChromeTest4() {
 		System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(ChromeBaseUrl);
-		
+
 		String expectedTitle = "Downloads 3| Selenium";
-		String actualTitle = driver.getTitle();		
+		String actualTitle = driver.getTitle();
 		String url = driver.getCurrentUrl();
-        int urlLength = url.length();
-        System.out.println("Current URL: " + url);
-        System.out.println("URL Length: " + urlLength);
-        
+		int urlLength = url.length();
+		System.out.println("Current URL: " + url);
+		System.out.println("URL Length: " + urlLength);
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Title matched: Test Script Passed: Did a Wonderful Job.....!");
 		} else {
 			System.out.println("Title not matched: Test Script Failed: Mentor Is Bad ");
 		}
-		
+
 		String actualURL = url;
-		String expectedURL = driver.getCurrentUrl();	
+		String expectedURL = driver.getCurrentUrl();
 		driver.navigate().refresh();
 		if (actualURL.equals(expectedURL)) {
 			System.out.println("URL matched: Test Script Passed: Did a Wonderful Job.....! ");
@@ -202,12 +204,12 @@ public class MultipleBrowserTest {
 		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get(EdgeBaseUrl);
-		
+
 		String expectedTitle = "TestNG Documentation";
 		String actualTitle = driver.getTitle();
 		String URL = driver.getCurrentUrl();
 		System.out.println(URL);
-		
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Title matched: Test Script Passed");
 		} else {
@@ -215,45 +217,44 @@ public class MultipleBrowserTest {
 		}
 		driver.quit();
 	}
-	
-	@Test(priority = 6)		
-		public class LinkTextandPartialLink {
-			WebDriver driver;
 
-			@BeforeTest
-			public void setUp() {
-				System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
-				driver = new ChromeDriver();
-				driver.manage().window().maximize();
-			}
+	@Test(priority = 7)
+	public class LinkTextandPartialLink {
+		WebDriver driver;
 
-			@Test
-			public void linkTest() throws Exception {
-				driver.get("https://www.hollandandbarrett.com/");
-				Thread.sleep(5000);
-				driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div[2]/div/div/button[2]")).click();
-				driver.findElement(By.partialLinkText("Vitamins")).click();
+		@BeforeTest
+		public void setUp() {
+			System.setProperty("webdriver.chrome.driver", "./Chrome Browser Jars/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+		}
 
-				List<WebElement> links = driver.findElements(By.xpath("//a"));
-				int nolinks = links.size();
-				System.out.println("No.Of links in hollandandbarrett Application: " + nolinks);
+		@Test
+		public void linkTest() throws Exception {
+			driver.get("https://www.hollandandbarrett.com/");
+			Thread.sleep(20000);
+			driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div[2]/div/div/button[2]")).click();
+			driver.findElement(By.partialLinkText("Vitamins")).click();
 
-				for (int i = 0; i < links.size(); i++) {
-					System.out.println(links.get(i).getText());
-					
-					String str = links.get(i).getText();
-					String str1 = "Vitamins";
-					if (str == str1) {
-						driver.findElement(By.linkText("Vitamins")).click();
-					//    driver.findElement(By.xpath("(//a[contains(@type,'button')])[4]")).click();
-					}
+			List<WebElement> links = driver.findElements(By.xpath("//a"));
+			int nolinks = links.size();
+			System.out.println("No.Of links in hollandandbarrett Application: " + nolinks);
+
+			for (int i = 0; i < links.size(); i++) {
+				System.out.println(links.get(i).getText());
+
+				String str = links.get(i).getText();
+				String str1 = "Vitamins";
+				if (str == str1) {
+					driver.findElement(By.linkText("Vitamins")).click();
+					// driver.findElement(By.xpath("(//a[contains(@type,'button')])[4]")).click();
 				}
 			}
+		}
 
-			@AfterTest
-			public void teardown() {
-				driver.quit();
-			}
+		@AfterTest
+		public void teardown() {
+			driver.quit();
+		}
+	}
 }
-}
-
